@@ -358,7 +358,8 @@ app.get("/travel-stories/filter", authenticateToken, async (req, res) => {
     const filteredStories = await TravelStory.find({
       userId: userId,
       visitedDate: { $gte: start, $lte: end },
-    }).sort({ isFavourite: -1 });
+    }).sort({ isFavourite: -1 }); 
+    
     res.status(200).json({ stories: filteredStories });
   } catch (error) {
     return res.status(500).json({ error: true, message: error.message });
