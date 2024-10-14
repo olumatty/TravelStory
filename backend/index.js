@@ -158,7 +158,7 @@ app.post("/add-travel-story", authenticateToken, async (req, res) => {
 });
 
 //Get All Travel Stories
-app.get("/add-travel-story", authenticateToken, async (req, res) => {
+app.get("/get-travel-story", authenticateToken, async (req, res) => {
   const { userId } = req.user;
 
   try {
